@@ -15,14 +15,53 @@ html {
 /****** SPLASH *******/
 
 
-#splash {
-    width: 90vw;
-    height: 67.22vw;
-    max-width: 500px;
-    max-height: 373.45px;
-    background-image: url(imgs/splash2.jpg);
-    background-size: cover;
+
+#splashContainer {
+    width: 100vw;
+    display: flex;
     margin: 0 auto;
+    justify-content: center;
+
+}
+
+
+#splash1 {
+    width: 50vw;
+    height: 75vw;
+    max-width: 500px;
+    max-height: 750px;
+    background-image: url(imgs/splash1.jpg);
+    background-size: cover;
+    display: none;
+
+}
+
+
+#splash2 {
+    width: 80vw;
+    height: 56.33vw;
+    max-width: 500px;
+    max-height: 352.11px;
+    background-image: url(imgs/logo1.svg);
+    background-size: cover;
+    margin: 0 0 100px 0;
+
+}
+
+@media only screen and (min-width: 700px) {
+    #splash1 {
+        display: block;
+        transform: translateX(5vw);
+    }
+
+    #splash2 {
+        z-index: 1;
+        transform: translateX(-5vw) translateY(3vw);
+        width: 50vw;
+        height: 35.21vw;
+        margin: 0;
+    }
+
 }
 
 
