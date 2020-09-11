@@ -30,7 +30,8 @@ function vis() {
     titler.feed.entry.forEach(titel => {
         if (filter == "alle" || filter == titel.gsx$genre.$t) {
             let klon = temp.cloneNode(true).content;
-            klon.querySelector(".titel").textContent = titel.gsx$titel.$t;
+            klon.querySelector(".titel").textContent = `${titel.gsx$titel.$t} - ${titel.gsx$kunstner.$t}`;
+            klon.querySelector(".info").textContent = `${titel.gsx$genre.$t}, ${titel.gsx$år.$t}`;
             klon.querySelector(".billede").src = `imgs/${titel.gsx$billede.$t}.jpg`;
             klon.querySelector("article").addEventListener("click", () => visDetaljer(titel));
 
