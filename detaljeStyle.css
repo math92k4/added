@@ -42,6 +42,7 @@
 
 .selectSpotify {
     grid-area: musik;
+    margin: 0 auto;
 }
 
 #luk {
