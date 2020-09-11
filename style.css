@@ -87,6 +87,14 @@ p {
     font-family: 'Space Mono', sans-serif;
 }
 
+h2 {
+    color: #323232;
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 700;
+}
+
+
+
 h3 {
     color: #323232;
     font-family: 'Space Mono', sans-serif;
@@ -153,6 +161,49 @@ button {
 
 
 
+/******* Styling på single-view *****/
+#select {
+    display: grid;
+    grid-template-areas: "billede""tekst""musik";
+    grid-gap: 10px;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    max-width: 1200px;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 100px 0 0 0;
+}
+
+
+
+
+
+
+
+
+.selectColumn {
+    grid-area: tekst;
+}
+
+.selectImg {
+    grid-area: billede;
+}
+
+
+.selectSpotify {
+    grid-area: musik;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -186,6 +237,23 @@ button {
     }
 
 
+
+
+
+
+
+
+
+    /****** single-view ****/
+
+
+
+
+    #select {
+        grid-template-areas: "billede tekst""musik musik";
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
 
 
 }
