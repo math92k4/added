@@ -14,6 +14,7 @@
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
     max-width: 1200px;
+    width: 90vw;
     margin: 0 auto;
 }
 
