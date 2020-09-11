@@ -9,11 +9,24 @@
 
 #select {
     display: grid;
-    grid-template-areas: "billede tekst""musik musik";
+    grid-template-areas: "billede""tekst""musik";
     grid-gap: 10px;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr;
+    max-width: 1200px;
+    margin: 0 auto;
 }
+
+@media only screen and (min-width: 700px) {
+
+    #select {
+        grid-template-areas: "billede tekst""musik musik";
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
 
 
 
