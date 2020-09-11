@@ -28,7 +28,6 @@ function vis() {
 
 
 function visDetaljer(titel) {
-    select.style.display = "block";
     select.querySelector(".selectTitel").textContent = titel.gsx$titel.$t;
     select.querySelector(".selectInfo").textContent = titel.gsx$info.$t;
     select.querySelector(".selectImg").src = `imgs/${titel.gsx$billede.$t}.jpg`;
