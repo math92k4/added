@@ -29,6 +29,9 @@ function vis() {
 
 function visDetaljer(titel) {
     select.querySelector(".selectTitel").textContent = `${titel.gsx$titel.$t} - ${titel.gsx$kunstner.$t}`;
+    select.querySelector(".selectGenre").textContent = titel.gsx$genre.$t;
+    select.querySelector(".selectType").textContent = titel.gsx$type.$t;
+    select.querySelector(".selectYear").textContent = titel.gsx$år.$t;
     select.querySelector(".selectInfo").textContent = titel.gsx$info.$t;
     select.querySelector(".selectImg").src = `imgs/${titel.gsx$billede.$t}.jpg`;
     select.querySelector(".selectSpotify").src = titel.gsx$play.$t;

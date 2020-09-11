@@ -21,6 +21,7 @@ html {
     display: flex;
     margin: 0 auto;
     justify-content: center;
+    padding: 100px 0 0 0;
 
 }
 
@@ -48,21 +49,7 @@ html {
 
 }
 
-@media only screen and (min-width: 700px) {
-    #splash1 {
-        display: block;
-        transform: translateX(5vw);
-    }
 
-    #splash2 {
-        z-index: 1;
-        transform: translateX(-5vw) translateY(3vw);
-        width: 50vw;
-        height: 35.21vw;
-        margin: 0;
-    }
-
-}
 
 
 
@@ -116,12 +103,33 @@ h3 {
 
 
 /***** styling på navigation ***/
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5vw;
+    background-color: white;
+    z-index: 2;
+}
 
 nav {
     display: flex;
     justify-content: center;
-    margin: 0 0 20px 0;
+    margin: auto 0;
+    display: none;
+
+
 }
+
+#navLogo {
+    background-image: url("imgs/logo2.svg");
+    background-size: cover;
+    width: 120px;
+    height: 73.71px;
+}
+
 
 /***** styling på knapper ***/
 
@@ -138,4 +146,46 @@ button {
 
 .valgt {
     text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 700px) {
+    #splash1 {
+        display: block;
+        transform: translateX(5vw);
+    }
+
+    #splash2 {
+        z-index: 1;
+        transform: translateX(-5vw) translateY(3vw);
+        width: 50vw;
+        height: 35.21vw;
+        margin: 0;
+    }
+
+
+
+    nav {
+        display: block;
+    }
+
+    #menuknap {
+        display: none;
+    }
+
+
+
+
 }
