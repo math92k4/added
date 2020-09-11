@@ -1,0 +1,98 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 80%;
+}
+
+
+
+
+
+/****** SPLASH *******/
+
+
+#splash {
+    width: 90vw;
+    height: 67.22vw;
+    max-width: 500px;
+    max-height: 373.45px;
+    background-image: url(imgs/splash2.jpg);
+    background-size: cover;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+/*** styling på section ****/
+
+
+#container {
+    width: 90vw;
+    max-width: 1400px;
+    margin: 0 auto;
+    background-color: white;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+
+img {
+    width: 100%;
+}
+
+
+
+
+
+p {
+    color: #323232;
+    font-family: 'inter', sans-serif;
+}
+
+h3 {
+    color: #323232;
+    font-family: "inter", sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+/***** styling på navigation ***/
+
+nav {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 20px 0;
+}
+
+/***** styling på knapper ***/
+
+button {
+    padding: 5px 10px;
+    margin: 10px 20px;
+    border: none;
+    background-color: white;
+    font-family: "inter", sans-serif;
+    font-size: 1rem;
+    color: #233644;
+}
+
+.valgt {
+    text-decoration: underline;
+}
