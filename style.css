@@ -95,12 +95,13 @@ img {
 
 p {
     color: #323232;
-    font-family: 'inter', sans-serif;
+    font-family: 'Space Mono', sans-serif;
 }
 
 h3 {
     color: #323232;
-    font-family: "inter", sans-serif;
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 700;
 }
 
 
@@ -127,7 +128,8 @@ button {
     margin: 10px 20px;
     border: none;
     background-color: white;
-    font-family: "inter", sans-serif;
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 700;
     font-size: 1rem;
     color: #233644;
 }
