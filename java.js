@@ -36,9 +36,31 @@ function vis() {
             klon.querySelector("article").addEventListener("click", () => visDetaljer(titel));
 
             container.appendChild(klon);
+
         }
     })
+
+    // burgermenu toggle hidden start
+    document.querySelector("#menuknap").addEventListener("click", toggleMenu);
 }
+
+
+// burgermenu toggle hidden funktion
+
+function toggleMenu() {
+    console.log("toggleMenu");
+
+    document.querySelector("nav").classList.toggle("hidden");
+
+    let erSkjult = document.querySelector("nav").classList.contains("hidden");
+
+    if (erSkjult == true) {
+        document.querySelector("#menuknap").textContent = "☰";
+    } else {
+        document.querySelector("#menuknap").textContent = "X";
+    }
+}
+
 
 
 function visDetaljer(titel) {

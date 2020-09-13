@@ -120,16 +120,45 @@ header {
     padding: 0 5vw;
     background-color: white;
     z-index: 2;
+    border-bottom: 0.5px solid #e2e2e2;
 }
 
 nav {
+    background-color: white;
+    width: 100%;
+    left: 0;
+    top: 80px;
+    position: absolute;
     display: flex;
-    justify-content: center;
-    margin: auto 0;
-    display: none;
-
-
+    flex-direction: column;
+    transition: 0.3s;
+    transform-origin: top left;
 }
+
+
+
+
+
+
+
+
+
+
+.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+
+
+
+
+
+
+
+
+
+
 
 #navLogo {
     background-image: url("imgs/logo2.svg");
@@ -193,6 +222,8 @@ button {
 .selectSpotify {
     grid-area: musik;
     margin: 0 auto;
+    width: 100%;
+    max-width: 500px;
 }
 
 
@@ -228,13 +259,8 @@ button {
 
 
 
-    nav {
-        display: block;
-    }
 
-    #menuknap {
-        display: none;
-    }
+
 
 
 
@@ -254,6 +280,48 @@ button {
         grid-template-rows: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 800px) {
+    #menuknap {
+        display: none;
+    }
+
+
+
+
+
+
+
+    /******* HEADER SKJULT NAV ******/
+    .hidden {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    nav {
+        position: static;
+        flex-direction: row;
+        justify-content: center;
+        width: auto;
+        margin: auto 0;
+    }
+
+
+
+
 
 
 }
