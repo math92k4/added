@@ -139,8 +139,7 @@ nav {
     transform-origin: top left;
 }
 
-button:hover {
-    cursor: pointer;}
+
 
 
 
@@ -186,6 +185,16 @@ button {
     font-weight: 700;
     font-size: 1rem;
     color: #233644;
+}
+
+
+button:focus {
+    outline: none;
+}
+
+
+button:hover {
+    cursor: pointer;
 }
 
 .valgt {
