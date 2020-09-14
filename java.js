@@ -59,7 +59,27 @@ function toggleMenu() {
     } else {
         document.querySelector("#menuknap").textContent = "X";
     }
+
+
+
+
+
+    //Ved klik på genre i fold ud-menu forsvinder burger fuld ud-menu
+
+    document.querySelectorAll(".filter").forEach((btnBurger) => {
+        btnBurger.addEventListener("click", genreClicked);
+    })
 }
+
+
+function genreClicked() {
+    console.log("genreClicked");
+    document.querySelector("nav").classList.add("hidden");
+    document.querySelector("#menuknap").textContent = "☰";
+}
+
+
+
 
 
 
