@@ -11,6 +11,9 @@ document.addEventListener("DOMContentLoaded", hentData);
 
 
 
+
+//I nedenstående funktion hentes vore json data fra sheetet. (Sheetet er defineret i en variabel øverst som "link")
+
 async function hentData() {
     const respons = await fetch(link);
     titler = await respons.json();
@@ -23,10 +26,17 @@ async function hentData() {
 
 
 
+
+
 function vis() {
+
+    // Her defineres variabler for section og template tag.
     const container = document.querySelector("#container");
     const temp = document.querySelector("template");
+
+    // Her nulstilles al data i section (id'et container)
     container.innerHTML = "";
+
     titler.feed.entry.forEach(titel => {
         if (filter == "alle" || filter == titel.gsx$genre.$t) {
             let klon = temp.cloneNode(true).content;
@@ -40,12 +50,19 @@ function vis() {
         }
     })
 
-    // burgermenu toggle hidden start
+    // burgermenu toggle hidden startes her ved eventlistener
     document.querySelector("#menuknap").addEventListener("click", toggleMenu);
 }
 
 
-// burgermenu toggle hidden funktion
+
+
+
+
+
+
+
+// burgermenu toggle og hide funktion
 
 function toggleMenu() {
     console.log("toggleMenu");
@@ -64,13 +81,19 @@ function toggleMenu() {
 
 
 
-    //Ved klik på genre i fold ud-menu forsvinder burger fuld ud-menu
+    //Eventlisteners på alle nav-kanpper så burger-menuen foldes ind efter valg af kategori (mobil-verson)
 
     document.querySelectorAll(".filter").forEach((btnBurger) => {
         btnBurger.addEventListener("click", genreClicked);
     })
 }
 
+
+
+
+
+
+//I nedenstående funktion nulstilles burgermenuen ved valg af kategori (mobil-version)
 
 function genreClicked() {
     console.log("genreClicked");
@@ -82,7 +105,7 @@ function genreClicked() {
 
 
 
-
+// Her sendes det valgte id videre over i single-view-html'en
 function visDetaljer(titel) {
     location.href = `detalje.html?id=${titel.gsx$id.$t}`
 }
@@ -93,13 +116,18 @@ function visDetaljer(titel) {
 
 
 
-
+//Eventlisteners puttes på hver knap via "forEach"
 function listenersToButtons() {
     document.querySelectorAll(".filter").forEach((btn) => {
         btn.addEventListener("click", filterBTNs);
     })
 
 }
+
+
+
+
+
 
 function filterBTNs() {
     filter = this.dataset.type;
