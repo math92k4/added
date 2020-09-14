@@ -151,7 +151,7 @@ function listenersToButtons() {
 function filterBTNs() {
     //Variablen filter bliver ligmed det dataset som den pågældende button har defineret i html'en
     filter = this.dataset.type;
-    //    document.querySelector("#kategoriOverskrift").textContent = this.textContent;
+    document.querySelector("#kategoriOverskrift").textContent = this.textContent;
 
     // classen "valgt" bliver fjernet fra alle buttons. "Valgt" er en class med css-styling som gør det tydeligt hvilken kategori der er valgt - fra start er "valgt" tildelt kategorien "alle" via html.
     document.querySelectorAll(".filter").forEach((btn) => {

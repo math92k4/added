@@ -5,7 +5,7 @@
 }
 
 html {
-    font-size: 80%;
+    font-size: 90%;
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
 }
@@ -62,14 +62,17 @@ html {
 
 /*** styling på section ****/
 
-
-#container {
+section {
     width: 90vw;
     max-width: 1400px;
     margin: 50px auto;
     background-color: white;
+}
+
+
+#container {
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 15px;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 
@@ -79,7 +82,7 @@ img {
 }
 
 article {
-    margin: 0 0 20px 0;
+    margin: 0 0 25px 0;
 }
 
 article:hover {
@@ -91,12 +94,32 @@ article:hover {
 p {
     color: #323232;
     font-family: 'Space Mono', sans-serif;
+    font-size: 1rem;
+}
+
+b {
+    font-weight: 700;
+}
+
+
+.selectColumn p {
+    margin: 0 0 10px 0;
+}
+
+#kategoriOverskrift {
+    color: #323232;
+    font-family: 'Space Mono', sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    padding: 0 0 15px 0;
 }
 
 h2 {
     color: #323232;
     font-family: 'Space Mono', sans-serif;
     font-weight: 700;
+    font-size: 2rem;
+    margin: 0 0 15px 0;
 }
 
 
@@ -105,6 +128,7 @@ h3 {
     color: #323232;
     font-family: 'Space Mono', sans-serif;
     font-weight: 700;
+    font-size: 1.3rem;
 }
 
 
@@ -223,7 +247,7 @@ button:hover {
 #select {
     display: grid;
     grid-template-areas: "billede""tekst""musik";
-    grid-gap: 10px;
+    grid-gap: 15px;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
     max-width: 1200px;
