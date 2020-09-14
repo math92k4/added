@@ -80,6 +80,10 @@ article {
     margin: 0 0 20px 0;
 }
 
+article:hover {
+    cursor: pointer;
+}
+
 
 
 p {
@@ -134,6 +138,9 @@ nav {
     transition: 0.3s;
     transform-origin: top left;
 }
+
+button:hover {
+    cursor: pointer;}
 
 
 
