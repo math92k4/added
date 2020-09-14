@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", hentData);
 
 
 
-//I funktionen hentData hentes json data fra sheetet. (Sheetet er defineret i en variabel øverst som "link")
+//Arrayet hentes ind
 async function hentData() {
     const respons = await fetch(link);
     titler = await respons.json();
@@ -46,7 +46,7 @@ function vis() {
     // Her nulstilles al data i vores container/section. Dette er nødvendigt så dataet ikke bliver indlæst flere gange - f.eks ved klik på en filterknap
     container.innerHTML = "";
 
-    //For hvert array i vores sheet/json, klones templated i html'en. Det øsnkede data hentes ind og indsættes i de forskellige classes.
+    //For hvert objekt i vores array/sheet, klones templated i html'en. Det øsnkede data hentes ind og indsættes i de forskellige classes.
     titler.feed.entry.forEach(titel => {
         if (filter == "alle" || filter == titel.gsx$genre.$t) {
             let klon = temp.cloneNode(true).content;
@@ -54,10 +54,11 @@ function vis() {
             klon.querySelector(".info").textContent = `${titel.gsx$genre.$t}, ${titel.gsx$år.$t}`;
             klon.querySelector(".billede").src = `imgs/${titel.gsx$billede.$t}.jpg`;
 
+
             //Eventlisteners bliver tilføjet hver article, så man via klik bliver henvist til vores singleview-site, via visDetaljer-funktionen
             klon.querySelector("article").addEventListener("click", () => visDetaljer(titel));
 
-            //for hvert array bliver templated tilføjet vores container som nyt child.
+            //for hvert objekt bliver templated tilføjet vores container som nyt child.
             container.appendChild(klon);
         }
     })
@@ -118,7 +119,7 @@ function genreClicked() {
 
 
 
-// VisDetaljer sender det valgte arrays id videre over i single-view-html'en (detalje.html)
+// VisDetaljer sender det valgte objekts id op i url'en. Dette id bliver hentet ned via detaljeJava.js (check variablen urlParams i detaljeJava.js)
 function visDetaljer(titel) {
     location.href = `detalje.html?id=${titel.gsx$id.$t}`
 }
