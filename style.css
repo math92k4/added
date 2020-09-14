@@ -28,10 +28,10 @@ html {
 
 #splash1 {
     width: 50vw;
-    height: 75vw;
+    height: 74.4vw;
     max-width: 500px;
-    max-height: 750px;
-    background-image: url(imgs/splash1.jpg);
+    max-height: 744px;
+    background-image: url(imgs/splash3.jpg);
     background-size: cover;
     display: none;
 
