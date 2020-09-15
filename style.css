@@ -306,7 +306,6 @@ button:hover {
 
 .selectSpotify {
     grid-area: musik;
-    margin: 0 auto;
     width: 100%;
     max-width: 500px;
 }
@@ -322,8 +321,26 @@ button:hover {
 /****** foooter *****/
 
 footer {
-    padding: 100px 0;
+    padding: 70px 0;
     border-top: 0.5px solid #e2e2e2;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+footer p {
+    margin: 0 auto;
+    align-self: center;
+    opacity: 0.8;
+}
+
+.footerLogo {
+    background-image: url("imgs/logo1.svg");
+    background-size: cover;
+    width: 150px;
+    height: 105.6px;
+    margin: 0 auto 30px auto;
+
 }
 
 
@@ -368,7 +385,7 @@ footer {
 
 
     #select {
-        grid-template-areas: "billede tekst""musik musik";
+        grid-template-areas: "billede tekst""billede musik";
 
         grid-template-columns: 1fr 1fr;
         margin: 0 auto 70px auto;
@@ -394,6 +411,18 @@ footer {
 
 
 
+
+
+    /****** FOOOOTER ****/
+
+    footer {
+        flex-direction: row;
+    }
+
+    .footerLogo {
+        margin: 0 auto;
+
+    }
 
 
 
