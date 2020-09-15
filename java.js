@@ -82,9 +82,9 @@ function toggleMenu() {
     //Hvis nav'ens liste af klasser indeholder .hidden, skal burgermenu vises - ellers X
     let erSkjult = document.querySelector("nav").classList.contains("hidden");
     if (erSkjult == true) {
-        document.querySelector("#menuknap").textContent = "☰";
+        document.querySelector("#menuknap").classList = "";
     } else {
-        document.querySelector("#menuknap").textContent = "X";
+        document.querySelector("#menuknap").classList.add("menuPosition");
     }
 
 
@@ -108,7 +108,7 @@ function genreClicked() {
     //hele nav får classen "hidden" så den forsvinder
     document.querySelector("nav").classList.add("hidden");
     //menuknappen går fra X (luk) til ☰ (burgermenu), og herved bliver menuen nulstillet ved klip på en kategori-button
-    document.querySelector("#menuknap").textContent = "☰";
+    document.querySelector("#menuknap").classList = "";
 }
 
 

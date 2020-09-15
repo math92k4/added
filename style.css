@@ -204,12 +204,19 @@ nav {
 
 
 #menuknap {
-    font-family: 'Inter', sans-serif;
-    font-size: 50px;
-    margin: auto 0;
-    color: #233644;
+    background-image: url(imgs/burgermenu.svg);
+    background-size: 200% 100%;
+    width: 73.71px;
+    height: 73.71px;
 }
 
+.menuPosition {
+    background-position: 100%;
+}
+
+#menuknap:hover {
+    cursor: pointer;
+}
 
 /***** styling på knapper ***/
 
