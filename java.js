@@ -5,19 +5,8 @@ let titler;
 const link = "https://spreadsheets.google.com/feeds/list/1Qhbtjd_VhlT8nuxoCCdbNCtfS7jHS7BAOy__kgOHWJM/od6/public/values?alt=json";
 
 
-
-
-
-
-
 //Eventlistener venter på at DOM er loaded før den starter selve scriptet via funktionen "hentData"
 document.addEventListener("DOMContentLoaded", hentData);
-
-
-
-
-
-
 
 
 
@@ -30,16 +19,8 @@ async function hentData() {
 }
 
 
-
-
-
-
-
-
-
+//Objekter fra arrayet sættes ind i html'en
 function vis() {
-
-    // Her defineres variabler for section og template-tag
     const container = document.querySelector("#container");
     const temp = document.querySelector("template");
 
@@ -69,11 +50,6 @@ function vis() {
 
 
 
-
-
-
-
-
 // burgermenu toggle og hide funktion
 function toggleMenu() {
     //Her bliver classen "hidden" slået til og fra (nav'en har "hidden" fra start i html)
@@ -97,11 +73,6 @@ function toggleMenu() {
 
 
 
-
-
-
-
-
 //I nedenstående funktion nulstilles burgermenuen ved valg af kategori (mobil-version)
 function genreClicked() {
 
@@ -110,11 +81,6 @@ function genreClicked() {
     //menuknappen går fra X (luk) til ☰ (burgermenu), og herved bliver menuen nulstillet ved klip på en kategori-button
     document.querySelector("#menuknap").classList = "";
 }
-
-
-
-
-
 
 
 
@@ -128,20 +94,12 @@ function visDetaljer(titel) {
 
 
 
-
-
-
-
 //Eventlisteners puttes på hver knap via "forEach". Disse eventlisteners vil starte funktionen filterBTNs som filtrere sidens indhold.
 function listenersToButtons() {
     document.querySelectorAll(".filter").forEach((btn) => {
         btn.addEventListener("click", filterBTNs);
     })
 }
-
-
-
-
 
 
 

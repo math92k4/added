@@ -13,35 +13,46 @@
 
 <body>
     <header>
+        <!-- Logo i header. Ved klik href til forside  -->
         <div id="navLogo">
             <a href="index.html" class="logoRef"></a>
         </div>
+
+        <!-- Tilbageknap, går "history.back i js -->
         <div id="tilbage"></div>
     </header>
 
 
+
+
     <main>
+        <!-- Html-skelet til selve indeholdet på siden. Inputtet hentes i json-sheet via js -->
         <section id="select">
             <img src="" alt="" class="selectImg">
 
             <div class="selectColumn">
                 <h1 class="selectTitel"></h1>
+                <!-- Spans til input a data fra sheet så kategorierne altid vil stå i bold -->
                 <p><b>Genre:</b> <span class="selectGenre"></span></p>
                 <p><b>Type:</b> <span class="selectType"></span></p>
                 <p><b>Year:</b> <span class="selectYear"></span></p>
                 <p><b>Info:</b> <span class="selectInfo"></span></p>
-
             </div>
-            <iframe src="" width="" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" class="selectSpotify"></iframe>
 
+            <!-- iframe til preview på spotify. Src hentes fra json-sheet via js -->
+            <iframe src="" width="" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media" class="selectSpotify"></iframe>
         </section>
     </main>
 
 
+
+    <!-- Simpel footer med logo og "lavet af" -->
     <footer>
         <div class="footerLogo"></div>
         <p><b>This site is designed and created by:</b> <br> Kathrine, Maria & Mathias</p>
     </footer>
 
     <script src="detaljeJava.js"></script>
-</body></html>
+</body>
+
+</html>

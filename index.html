@@ -13,9 +13,12 @@
 
 <body>
     <header>
+        <!-- Logo i header. Ved klik href til forside  -->
         <div id="navLogo">
             <a href="index.html" class="logoRef"></a>
         </div>
+
+        <!-- Filtreringsknapper med data-atributter og onclick-referencer til sectionen hvor det valgte data bliver vist -->
         <nav class="hidden">
             <button class="filter valgt" data-type="alle" onclick="location.href='#section';">All</button>
             <button class="filter" data-type="Pop" onclick="location.href='#section';">Pop</button>
@@ -23,28 +26,33 @@
             <button class="filter" data-type="Hip Hop" onclick="location.href='#section';">Hip Hop</button>
             <button class="filter" data-type="Alternative" onclick="location.href='#section';">Alternative</button>
         </nav>
+
+        <!--  Burgermenu til mobile-version  -->
         <div id="menuknap"></div>
     </header>
 
 
+    <!-- Div-container til splashbilleder. Splash1 forsvinder i mobilverision -->
     <div id="splashContainer">
         <div id=splash1></div>
         <div id=splash2></div>
     </div>
 
 
-
     <main>
         <section id="section">
+            <!-- Div-container til at flexe et logo ved siden af h1'eren -->
             <div class="overskriftFlex">
                 <div class="kategoriLogo"></div>
                 <h1 id="kategoriOverskrift">All</h1>
             </div>
+
+            <!-- Div-container hvor i template med data fra json-sheet bliver appended -->
             <div id="container"></div>
         </section>
     </main>
 
-
+    <!-- Templated viser html-strukturen for hver sang/Ep/album  -->
     <template>
         <article>
             <img class="billede" src="" alt="">
@@ -55,13 +63,14 @@
         </article>
     </template>
 
-
-
+    <!-- Simpel footer med logo og "lavet af" -->
     <footer>
         <div class="footerLogo"></div>
         <p><b>This site is designed and created by:</b> <br> Kathrine, Maria & Mathias</p>
     </footer>
 
-
+    <!-- Hvilken js-fil index.html refferere til -->
     <script src="java.js"></script>
-</body></html>
+</body>
+
+</html>

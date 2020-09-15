@@ -14,7 +14,7 @@ html {
 
 
 
-/****** SPLASH *******/
+/************************* SPLASH **************************/
 
 
 
@@ -60,7 +60,7 @@ html {
 
 
 
-/*** styling på section ****/
+/******************* styling på section ***********************/
 
 section {
     width: 90vw;
@@ -152,47 +152,78 @@ h3 {
 
 
 
-/***** styling på navigation ***/
+
+
+
+
+
+
+
+/********************** styling på navigation *****************************/
+
 header {
     position: fixed;
+    /*For gøre headeren relativ ifht skærmer, og derved fastgjordt i toppen */
     width: 100%;
-    top: 0;
+    /* Headeren fylder nu hele bredten */
     display: flex;
+    /* Flexer de indeværende elementer ud på en række */
     justify-content: space-between;
+    /* Laver lige meget plads mellem alle elementer. Fordi der altid kun vil være vist 2 elementer, skubbes de til hver sin kant */
     padding: 0 5vw;
+    /* padding i begge side for at aligne med resten af sidens indhold */
     background-color: white;
     z-index: 2;
+    /* Et af splash-billederne har z-index 1. For at headeren ligger ovenpå splash-billedet har den derfor z-index 2 */
     border-bottom: 0.5px solid #e2e2e2;
+    /* Da header og main begger er hvide, er headeren gjordt tydeligere med en lille grålig streg*/
 }
 
 nav {
     background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 59%, rgba(255, 255, 255, 0) 100%);
-    width: 100%;
+    /* lodret opacity-gradiant på nav'en, så man ane de undeliggen elementer, når nav er foldet ud på mobil  */
+    position: absolute;
+    /* for at gøre nav'ens placering relativ - fjernes senere i mediaquerry for desktop */
     left: 0;
     top: 74.7px;
-    position: absolute;
+    /* placerer nav under header. (header height=74.7px */
+    width: 100%;
     display: flex;
     flex-direction: column;
     transition: 0.3s;
+    /* sætter tid for animation */
     transform-origin: top left;
+    /* sætter animationens akse */
     padding: 40px 0 100% 0;
+    /* 100% padding i bunden for at nav fylder hele skærmen på mobil */
 }
 
-
-
-
-
-
-
-
-
-
-
-
+/* Selve animationen for nav toggle */
 .hidden {
     opacity: 0;
     transform: translateX(-100%);
 }
+
+#menuknap {
+    background-image: url(imgs/burgermenu.svg);
+    /* svg som indeholder både burger-ikon og X (til sprite-animation) */
+    width: 73.71px;
+    height: 73.71px;
+    background-size: 200% 100%;
+    /* angiver at svg'en er dobbelt så bred som den er vist */
+
+}
+
+/* Denne class vil, vha js, toggle svg'ens position så den skifter mellen burger og X */
+.menuPosition {
+    background-position: 100%;
+}
+
+
+
+
+
+
 
 
 
@@ -204,10 +235,6 @@ nav {
     height: 100%;
 }
 
-
-
-
-
 #navLogo {
     background-image: url("imgs/logo2.svg");
     background-size: cover;
@@ -215,18 +242,6 @@ nav {
     height: 73.71px;
 }
 
-
-
-#menuknap {
-    background-image: url(imgs/burgermenu.svg);
-    background-size: 200% 100%;
-    width: 73.71px;
-    height: 73.71px;
-}
-
-.menuPosition {
-    background-position: 100%;
-}
 
 #menuknap:hover {
     cursor: pointer;
@@ -244,7 +259,21 @@ nav {
     cursor: pointer;
 }
 
-/***** styling på knapper ***/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/************************* styling på knapper **********************/
 
 button {
     padding: 5px 10px;
@@ -277,7 +306,13 @@ button:hover {
 
 
 
-/******* Styling på single-view *****/
+
+
+
+
+
+
+/************************** Styling på single-view ************************/
 #select {
     display: grid;
     grid-template-areas: "billede""musik""tekst";
@@ -288,14 +323,6 @@ button:hover {
     padding: 100px 0 0 0;
 }
 
-
-
-
-
-
-
-
-
 .selectColumn {
     grid-area: tekst;
 }
@@ -303,7 +330,6 @@ button:hover {
 .selectImg {
     grid-area: billede;
 }
-
 
 .selectSpotify {
     grid-area: musik;
@@ -318,7 +344,7 @@ button:hover {
 
 
 
-/****** foooter *****/
+/************************* foooter ************************/
 
 footer {
     padding: 70px 0;
@@ -340,7 +366,6 @@ footer p {
     width: 150px;
     height: 105.6px;
     margin: 0 auto 30px auto;
-
 }
 
 
@@ -352,7 +377,17 @@ footer p {
 
 
 
+
+
+
+/********************** MEDIAS ************************/
+
+
+
 @media only screen and (min-width: 700px) {
+
+
+    /******************** SPLASH *************/
     #splash1 {
         display: block;
         transform: translateX(5vw);
@@ -374,23 +409,13 @@ footer p {
 
 
 
-
-
-
-
-
-    /****** single-view ****/
-
-
-
+    /************************* single-view ***********************/
 
     #select {
         grid-template-areas: "billede tekst""billede musik";
         grid-template-columns: 1fr 1fr;
         margin: 0 auto 70px auto;
     }
-
-
 }
 
 
@@ -403,16 +428,13 @@ footer p {
 
 
 
+
+
+
+
 @media only screen and (min-width: 800px) {
-    #menuknap {
-        display: none;
-    }
 
-
-
-
-
-    /****** FOOOOTER ****/
+    /************************* FOOOOTER ***********************/
 
     footer {
         flex-direction: row;
@@ -420,13 +442,16 @@ footer p {
 
     .footerLogo {
         margin: 0 auto;
-
     }
 
 
 
 
-    /******* HEADER SKJULT NAV ******/
+
+
+
+
+    /************************** HEADER SKJULT NAV *************************/
     .hidden {
         transform: translateX(0);
         opacity: 1;
@@ -445,9 +470,8 @@ footer p {
         margin: 10px 20px;
     }
 
-
-
-
-
+    #menuknap {
+        display: none;
+    }
 
 }

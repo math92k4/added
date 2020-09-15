@@ -17,20 +17,12 @@ document.addEventListener("DOMContentLoaded", hentData);
 
 
 
-
-
-
-
 //json-dataet hentes ind
 async function hentData() {
     const respons = await fetch(link);
     titler = await respons.json();
     vis();
 }
-
-
-
-
 
 
 
@@ -51,10 +43,6 @@ function vis() {
 
 
 
-
-
-
-
 //De øsnkede information/values fra objektet fordeles ud i htmlen. (Den valgte class' tekstindput eller src's bliver ligmed den valgte properties value).
 function visDetaljer(titel) {
     select.querySelector(".selectTitel").textContent = `${titel.gsx$titel.$t} - ${titel.gsx$kunstner.$t}`;
@@ -66,10 +54,6 @@ function visDetaljer(titel) {
     select.querySelector(".selectSpotify").src = titel.gsx$play.$t;
 
 }
-
-
-
-
 
 
 
