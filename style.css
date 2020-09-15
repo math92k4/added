@@ -166,15 +166,16 @@ header {
 }
 
 nav {
-    background-color: white;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 1) 59%, rgba(255, 255, 255, 0) 100%);
     width: 100%;
     left: 0;
-    top: 80px;
+    top: 74.7px;
     position: absolute;
     display: flex;
     flex-direction: column;
     transition: 0.3s;
     transform-origin: top left;
+    padding: 40px 0 100% 0;
 }
 
 
@@ -247,13 +248,14 @@ nav {
 
 button {
     padding: 5px 10px;
-    margin: 10px 20px;
+    margin: 10px auto;
     border: none;
     background-color: white;
     font-family: 'Space Mono', sans-serif;
     font-weight: 700;
     font-size: 1rem;
     color: #233644;
+
 }
 
 
@@ -440,6 +442,11 @@ footer p {
         justify-content: center;
         width: auto;
         margin: auto 0;
+        padding: 0;
+    }
+
+    button {
+        margin: 10px 20px;
     }
 
 
