@@ -128,7 +128,7 @@ h3 {
     color: #323232;
     font-family: 'Space Mono', sans-serif;
     font-weight: 700;
-    font-size: 1.3rem;
+    font-size: 1rem;
 }
 
 
@@ -287,6 +287,13 @@ button:hover {
 
 
 
+/****** foooter *****/
+
+footer {
+    padding: 100px 0;
+    border-top: 0.5px solid #e2e2e2;
+}
+
 
 
 
@@ -330,8 +337,9 @@ button:hover {
 
     #select {
         grid-template-areas: "billede tekst""musik musik";
-        grid-template-rows: 1fr 1fr;
+
         grid-template-columns: 1fr 1fr;
+        margin: 0 auto 70px auto;
     }
 
 
