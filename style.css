@@ -280,7 +280,7 @@ button:hover {
 /******* Styling på single-view *****/
 #select {
     display: grid;
-    grid-template-areas: "overskrift""billede""musik""tekst";
+    grid-template-areas: "billede""musik""tekst";
     grid-gap: 15px;
     max-width: 1200px;
     width: 90vw;
@@ -294,9 +294,7 @@ button:hover {
 
 
 
-.selectTitel {
-    grid-area: overskrift;
-}
+
 
 .selectColumn {
     grid-area: tekst;
@@ -388,8 +386,7 @@ footer p {
 
 
     #select {
-        grid-template-areas: "billede overskrift""billede tekst""billede musik";
-
+        grid-template-areas: "billede tekst""billede musik";
         grid-template-columns: 1fr 1fr;
         margin: 0 auto 70px auto;
     }
