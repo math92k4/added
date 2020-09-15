@@ -112,6 +112,7 @@ h1 {
     font-weight: 500;
     font-size: 2.3rem;
     padding: 0 0 15px 0;
+    align-self: flex-end;
 }
 
 h2 {
@@ -133,7 +134,18 @@ h3 {
 
 
 
+.overskriftFlex {
+    display: flex;
+}
 
+.kategoriLogo {
+    background-image: url("imgs/genreLogo.svg");
+    height: 40px;
+    width: 50px;
+    margin: 0 0 20px 0;
+    background-size: cover;
+
+}
 
 
 
