@@ -334,6 +334,7 @@ button:hover {
 .selectSpotify {
     grid-area: musik;
     width: 100%;
+    align-self: end;
 }
 
 
