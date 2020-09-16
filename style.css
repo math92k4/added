@@ -185,7 +185,7 @@ nav {
     position: absolute;
     /* for at gøre nav'ens placering relativ - fjernes senere i mediaquerry for desktop */
     left: 0;
-    top: 74.7px;
+    top: 66px;
     /* placerer nav under header. (header height=74.7px */
     width: 100%;
     display: flex;
@@ -207,8 +207,8 @@ nav {
 #menuknap {
     background-image: url(imgs/burgermenu.svg);
     /* svg som indeholder både burger-ikon og X (til sprite-animation) */
-    width: 73.71px;
-    height: 73.71px;
+    width: 65px;
+    height: 65px;
     background-size: 200% 100%;
     /* angiver at svg'en er dobbelt så bred som den er vist */
 
@@ -238,8 +238,8 @@ nav {
 #navLogo {
     background-image: url("imgs/logo2.svg");
     background-size: cover;
-    width: 120px;
-    height: 73.71px;
+    width: 106.6px;
+    height: 65px;
 }
 
 
@@ -250,8 +250,8 @@ nav {
 
 #tilbage {
     background-image: url("imgs/tilbage.svg");
-    width: 73.71px;
-    height: 73.71px;
+    width: 65px;
+    height: 65px;
     background-size: cover;
 }
 
